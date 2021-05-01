@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
 
-    public List<Sprite> gamePuzzles = new List<Sprite>();
-    
+    public List<Button> btns = new List<Button>();
+
     void Start()
     {
         GetButtons();
@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour
     {
         GameObject[] objects = GameObject.FindGameObjectsWithTag("PuzzleButton");
 
-        for(int i=0; i<objects.Length; i++)
+        for (int i = 0; i < objects.Length; i++)
         {
             btns.Add(objects[i].GetComponent<Button>());
         }
